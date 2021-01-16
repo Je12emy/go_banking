@@ -1,0 +1,95 @@
+{
+  "main": {
+    "id": "13afc4e175ab30f7",
+    "type": "split",
+    "children": [
+      {
+        "id": "cb901a653fb6c0b1",
+        "type": "leaf",
+        "active": true,
+        "state": {
+          "type": "markdown",
+          "state": {
+            "file": "Notes/01 Router Basics.md",
+            "mode": "source"
+          }
+        }
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "ae55cbbfb8be5ad2",
+    "type": "split",
+    "children": [
+      {
+        "id": "a4b88d678c4d02a0",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "012e6389cbecfb8c",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {}
+            }
+          },
+          {
+            "id": "d8d85bffdc089b07",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 258,
+    "collapsed": true
+  },
+  "right": {
+    "id": "9aa85bef2ed829b9",
+    "type": "split",
+    "children": [
+      {
+        "id": "f212e1dab292f4a6",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "337d879679dbcf94",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "file": "Notes/01 Router Basics.md",
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300,
+    "collapsed": true
+  },
+  "lastOpenFiles": [
+    "Notes/01 Router Basics.md",
+    "Notes/Images/Pasted image 20210107001335.png",
+    "Pasted image 20210107001335.png",
+    "Untitled.md"
+  ]
+}

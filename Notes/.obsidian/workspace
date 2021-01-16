@@ -1,0 +1,101 @@
+{
+  "main": {
+    "id": "e96e837ea30aa765",
+    "type": "split",
+    "children": [
+      {
+        "id": "958b940a31a23d7d",
+        "type": "leaf",
+        "active": true,
+        "state": {
+          "type": "markdown",
+          "state": {
+            "file": "03 Securing the Application.md",
+            "mode": "preview"
+          }
+        }
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "52f7cf055a4eb1e9",
+    "type": "split",
+    "children": [
+      {
+        "id": "ac7d6d175ab6a1ad",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "fb84fcbfc74ade7f",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {}
+            }
+          },
+          {
+            "id": "9c3287595cc1191e",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300,
+    "collapsed": true
+  },
+  "right": {
+    "id": "970eb8e12c98d8ef",
+    "type": "split",
+    "children": [
+      {
+        "id": "6c24a59b7b5c7b55",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "3cacd7eb67f8b325",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "file": "03 Securing the Application.md",
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300,
+    "collapsed": true
+  },
+  "lastOpenFiles": [
+    "03 Securing the Application.md",
+    "02 Application Development.md",
+    "01 Router Basics.md",
+    "Images/Pasted image 20210115124320.png",
+    "Images/Pasted image 20210115124009.png",
+    "Untitled.md",
+    "Hexagonal Architecture Database Adapter.png",
+    "Images/Pasted image 20210111213711.png",
+    "Pasted image 20210108235503.png",
+    "Pasted image 20210108144512.png"
+  ]
+}
