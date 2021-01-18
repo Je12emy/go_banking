@@ -10,7 +10,7 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "03 Securing the Application.md",
+            "file": "04 Unit Testing.md",
             "mode": "preview"
           }
         }
@@ -53,7 +53,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300,
+    "width": 253,
     "collapsed": true
   },
   "right": {
@@ -70,7 +70,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "03 Securing the Application.md",
+                "file": "04 Unit Testing.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -87,15 +87,15 @@
     "collapsed": true
   },
   "lastOpenFiles": [
+    "Untitled.md",
     "03 Securing the Application.md",
+    "Images/Pasted image 20210116231737.png",
     "02 Application Development.md",
     "01 Router Basics.md",
     "Images/Pasted image 20210115124320.png",
     "Images/Pasted image 20210115124009.png",
-    "Untitled.md",
     "Hexagonal Architecture Database Adapter.png",
     "Images/Pasted image 20210111213711.png",
-    "Pasted image 20210108235503.png",
-    "Pasted image 20210108144512.png"
+    "Pasted image 20210108235503.png"
   ]
 }

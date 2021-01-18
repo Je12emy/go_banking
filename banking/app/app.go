@@ -46,16 +46,29 @@ func Start() {
 
 	customerRepositoryDB := domain.NewCustomerRepositoryDb(dbClient)
 	accountRepositoryDB := domain.NewAccountRepositoryDB(dbClient)
-	transactionRepositoryDB := domain.NewTransactionRepositoryDB(dbClient)
 
 	ch := CustomerHandlers{service.NewCustomerService(customerRepositoryDB)}
 	ah := AccountHandler{service.NewAccountService(accountRepositoryDB)}
-	th := TransactionHandlers{service.NewTransactionService(transactionRepositoryDB)}
 
-	router.HandleFunc("/customers", ch.getAllCustomers).Methods(http.MethodGet)
-	router.HandleFunc("/customers/{customer_id:[0-9]+}", ch.getCustomer).Methods(http.MethodGet)
-	router.HandleFunc("/customers/{customer_id:[0-9]+}/account", ah.newAccount).Methods(http.MethodPost)
-	router.HandleFunc("/transaction", th.newTransaction).Methods(http.MethodPost)
+	router.HandleFunc("/customers", ch.getAllCustomers).
+		Methods(http.MethodGet).
+		Name("GetAllCustomers")
+	router.
+		HandleFunc("/customers/{customer_id:[0-9]+}", ch.getCustomer).
+		Methods(http.MethodGet).
+		Name("GetCustomer")
+	router.
+		HandleFunc("/customers/{customer_id:[0-9]+}/account", ah.newAccount).
+		Methods(http.MethodPost).
+		Name("NewAccount")
+	router.
+		HandleFunc("/customers/{customer_id:[0-9]+}/account/{account_id:[0-9]+}", ah.MakeTransaction).
+		Methods(http.MethodPost).
+		Name("NewTransaction")
+
+	// middleware
+	am := AuthMiddleware{domain.NewAuthRepository()}
+	router.Use(am.authorizationHandler())
 
 	// Listen on port 8000, we can pass a router as a seccond param but we are using the default one
 	log.Fatal(http.ListenAndServe("localhost:8000", router))

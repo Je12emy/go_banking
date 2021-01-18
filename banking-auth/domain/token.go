@@ -2,6 +2,7 @@ package domain
 
 import (
 	"encoding/json"
+
 	"github.com/dgrijalva/jwt-go"
 )
 
@@ -25,6 +26,7 @@ func BuildClaimsFromJwtMapClaims(mapClaims jwt.MapClaims) (*Claims, error) {
 		return nil, err
 	}
 	var c Claims
+	// transform the json into the Claims domain object
 	err = json.Unmarshal(bytes, &c)
 	if err != nil {
 		return nil, err
@@ -51,6 +53,7 @@ func (c Claims) IsValidAccountId(accountId string) bool {
 }
 
 func (c Claims) IsRequestVerifiedWithTokenClaims(urlParams map[string]string) bool {
+	// check if the customer_id and the consulted account in the token and request are the same
 	if c.CustomerId != urlParams["customer_id"] {
 		return false
 	}

@@ -47,7 +47,7 @@ func (s DefaultAuthService) Verify(urlParams map[string]string) (bool, error) {
 			if claims, err := domain.BuildClaimsFromJwtMapClaims(mapClaims); err != nil {
 				return false, err
 			} else {
-				/* if Role if user then check if the account_id and customer_id
+				/* if Role is user then check if the account_id and customer_id
 				   coming in the URL belongs to the same token
 				*/
 				if claims.IsUserRole() {
@@ -66,6 +66,7 @@ func (s DefaultAuthService) Verify(urlParams map[string]string) (bool, error) {
 }
 
 func jwtTokenFromString(tokenString string) (*jwt.Token, error) {
+	// decode the token with the signature key
 	token, err := jwt.Parse(tokenString, func(token *jwt.Token) (interface{}, error) {
 		return []byte(domain.HMAC_SAMPLE_SECRET), nil
 	})

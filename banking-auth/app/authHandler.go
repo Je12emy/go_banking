@@ -42,8 +42,9 @@ func (h AuthHandler) Verify(w http.ResponseWriter, r *http.Request) {
 	for k := range r.URL.Query() {
 		urlParams[k] = r.URL.Query().Get(k)
 	}
-
+	// from the map, if the token key is not empty
 	if urlParams["token"] != "" {
+
 		isAuthorized, appError := h.service.Verify(urlParams)
 		if appError != nil {
 			writeResponse(w, http.StatusForbidden, notAuthorizedResponse())
