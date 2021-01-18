@@ -10,8 +10,7 @@ This is also know as *Ports & Adapters*, this is a pattern which guides the stru
 - It issolates the core bussiness of an application, so it's behavior can be tested independently.
 - Not complicated to set up.
 
-![[The Hexagonal Arquitecture.png]]
-
+![The Hexagonal Arquitecture](Images/The%20Hexagonal%20Arquitecture.png)
 ### Principles
 Built on 3 principles
 - Explicitly separate the code in 3 large areas.
@@ -25,7 +24,7 @@ Built on 3 principles
 
 This is how the Hexagonal architecture would look like in our application.
 
-![[Applied Hexagonal Architecture.png]]
+![Applied Hexagonal Architecture](Images/Applied%20Hexagonal%20Architecture.png)
 
 ## Implementing the Hexagonal Architecture
 
@@ -90,7 +89,7 @@ func NewCustomerRepositoryStub() CustomerRepositoryStub {
 
 With this code we have created the bussiness object and the mock adapter in our application.
 
-![[Applied Hexagonal Architecture Repository and Mock Adapter.png]]
+![Applied Hexagonal Architecture Repository and Mock Adapter](Images/Applied%20Hexagonal%20Architecture%20Repository%20and%20Mock%20Adapter.png)
 
 Now we need to connect the Service and the Repository, to accomplish this, we will create the bussiness logic component which implements the service and inject the dependency from the repository.
 
@@ -126,7 +125,7 @@ func NewCustomerService(repository domain.CustomerRepository) DefaultCustomerSer
 
 With this code we are able to acomplish this.
 
-![[Hexagonal Architecture Primary and Secondary Ports.png]]
+![Hexagonal Architecture Primary and Secondary Ports](Images/Hexagonal%20Architecture%20Primary%20and%20Secondary%20Ports.png)
 
 Next we will connect our handlers with the customer service, this is done with a new `struct` which dependes on the `CustomerService` interface
 
@@ -142,7 +141,7 @@ func (ch \*CustomerHandlers) getAllCustomers(w http.ResponseWriter, r \*http.Req
 
 With this, we are able to connect the handlers and the service.
 
-![[Hexagonal Architecture Handlers and Service.png]]
+![Hexagonal Architecture Handlers and Service](Images/Hexagonal%20Architecture%20Handlers%20and%20Service.png)
 
 Finally we need to wire up our whole application at `app.go`.
 
@@ -155,7 +154,7 @@ func Start() {
 
 This is how our application looks like now
 
-![[Implemented Hexagonal Architecture.png]]
+![Implemented Hexagonal Architecture](Images/Implemented%20Hexagonal%20Architecture.png)
 
 In the handler we are able to retrieve our customer list like so
 
@@ -169,7 +168,7 @@ func (ch \*CustomerHandlers) getAllCustomers(w http.ResponseWriter, r \*http.Req
 
 Now we need to implement the DataBase Adapter into our application and finally inject it when working with our application. For this we will need a real MySql database instance.
 
-![[Hexagonal Architecture Database Adapter.png]]
+![Hexagonal Architecture Database Adapter](Images/Hexagonal%20Architecture%20Database%20Adapter.png)
 
 To access our database we will need Go's [MySql driver](https://github.com/Go-SQL-Driver/MySQL/) which will allow us to open a connection and query into a MySql instance.
 
@@ -620,7 +619,7 @@ func (d CustomerRepositoryDb) ById(id string) (\*Customer, \*errs.AppError) {
 
 This special layer is meant for communication between the user side with the bussiness side.
 
-![[DTO.png]]
+![DTO](Images/DTO.png)
 
 This layer improves modularity and prevents domain object scattering around all the other layers, until now we have been using the domain objects as DTO's, this is fine for small applications but the domain should not be exposed to the outside world.
 

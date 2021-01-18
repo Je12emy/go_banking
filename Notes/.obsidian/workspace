@@ -10,8 +10,8 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "04 Unit Testing.md",
-            "mode": "preview"
+            "file": "01 Router Basics.md",
+            "mode": "source"
           }
         }
       }
@@ -53,8 +53,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 253,
-    "collapsed": true
+    "width": 253
   },
   "right": {
     "id": "970eb8e12c98d8ef",
@@ -70,7 +69,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "04 Unit Testing.md",
+                "file": "01 Router Basics.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -87,15 +86,15 @@
     "collapsed": true
   },
   "lastOpenFiles": [
-    "Untitled.md",
-    "03 Securing the Application.md",
-    "Images/Pasted image 20210116231737.png",
-    "02 Application Development.md",
     "01 Router Basics.md",
+    "02 Application Development.md",
+    "04 Unit Testing.md",
+    "03 Securing the Application.md",
+    "Untitled.md",
+    "Images/Pasted image 20210116231737.png",
     "Images/Pasted image 20210115124320.png",
     "Images/Pasted image 20210115124009.png",
     "Hexagonal Architecture Database Adapter.png",
-    "Images/Pasted image 20210111213711.png",
-    "Pasted image 20210108235503.png"
+    "Images/Pasted image 20210111213711.png"
   ]
 }

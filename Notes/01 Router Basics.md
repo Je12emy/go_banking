@@ -9,7 +9,7 @@ There are this chapter's objectives
 
 In the heart of a HTTP web server lies a multiplexer, this component is responsible for matching (the request's patterns with) all the registered routes and then it passed the control to the apropiate handler function.
 
-![[Request Multiplexer.png]]
+![Request Multiplexer](Images/Request%20Multiplexer.png)
 
 We will not be using any external libraries in this course, the default http package already provides a router package and we only need two functions: one for registering routes and another one for starting the server.
 

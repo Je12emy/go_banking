@@ -2,13 +2,13 @@
 
 For authentication we wil be creating a separate server with the responsibility to generate and validate authentication tokens, this is the basic flow.
 
-![[Auth server flow.png]]
+![Auth server flow](Images/Auth%20server%20flow.png)
 
 ## JWT or JSON Web Token
 
 JWT tokens have the following structure when encoded
 
-![[JWT Structure.png]]
+![JWT Structure](Images/JWT%20Structure.png)
 
 The data located in a token should NOT be sensitive since it can be viewed and modified, which of course will cause it to be rejected by our auth server. 
 
@@ -167,7 +167,7 @@ This whole token is then returned to the handler, which returns it as a response
 
 Validation for routes will be made through a middleware, middleware is a chain of function to be executed when a route request is received.
 
-![[Middleware.png]]
+![Middleware](Images/Middleware.png)
 
 This middleware will allow us to check the validity of each JWT and stop the request's flow if needed.
 
